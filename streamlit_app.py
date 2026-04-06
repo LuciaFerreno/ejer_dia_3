@@ -7,5 +7,4 @@ archivo = st.file_uploader("Sube un CSV", type=["csv"])
 
 if archivo:
     df = pd.read_csv(archivo)
-    st.dataframe(df, use_container_width=True)
-    
+    st.experimental_data_editor(df, num_rows="dynamic")
