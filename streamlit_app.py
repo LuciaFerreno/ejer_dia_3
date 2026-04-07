@@ -1,21 +1,14 @@
 import streamlit as st
 import pandas as pd
- hotfix/mejoras_ui
 
+# Título de la app
 st.title("Aplicación CSV Mejorada - Hotfix")
 
- 
-
-
-main
-
+# Subir archivo CSV
 archivo = st.file_uploader("Sube un CSV", type=["csv"])
 
+# Mostrar la tabla editable si se sube un CSV
 if archivo:
     df = pd.read_csv(archivo)
-hotfix/mejoras_ui
-    st.dataframe(df, use_container_width=True)
+    st.data_editor(df, num_rows="dynamic")
     
-
-    st.dataframe(df)
- main
