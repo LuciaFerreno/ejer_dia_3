@@ -10,5 +10,5 @@ archivo = st.file_uploader("Sube un CSV", type=["csv"])
 # Mostrar la tabla editable si se sube un CSV
 if archivo:
     df = pd.read_csv(archivo)
-    st.experimental_data_editor(df, num_rows="dynamic")
+    st.data_editor(df, num_rows="dynamic")
     
